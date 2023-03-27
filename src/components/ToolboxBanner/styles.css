@@ -1,0 +1,10 @@
+.banner {
+  background-color: #fa8072;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+h2 {
+  color: white;
+}
