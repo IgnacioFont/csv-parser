@@ -6,6 +6,12 @@
 
 ## Ejecutar la app
 
+### Prerequisitos
+
+- `node 14` para levantar el backend
+- `node 16` para levantar el frontend
+- `docker` y `docker-compose` para levantar el proyecto usando docker
+
 ### Usando Docker
 
 En el root del projecto ejecutar el comando:
