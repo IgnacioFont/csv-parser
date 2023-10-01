@@ -1,33 +1,49 @@
-# Toolbox Challenge
+# CSV Parser
 
-<p align="center">
-  <a href="https://www.toolboxtve.com/" target="blank"><img src="https://files.toolboxtve.com/wp-content/uploads/2018/04/15144954/logo-stycky.png" width="250" alt="Toolbox Logo" /></a>
-</p>
+## Overview
 
-## Ejecutar la app
+This is a coding challenge I got for an interview where I was asked to develop a CSV parser. I was given a deadline of three days to complete it.
 
-### Usando Docker
+## Requiremets
 
-En el root del projecto ejecutar el comando:
+For the API:
+
+- It must run using NodeJS 14 and must not depend on globally installed libraries, environment variables, or configurations specific to any operating system.
+- It must be written in JavaScript, not using Babel, TypeScript, Dart, Elm, etc.
+- It must use Express, Chai and Mocha.
+
+For the frontend:
+
+- It must use functional programming and React hooks.
+- It must run using NodeJS 16 and must not depend on globally installed libraries, environment variables, or configurations specific to any operating system.
+- The code must be written in JavaScript (ES6+) and should not use the following tools: TypeScript, Dart, Elm, or similar.
+- Must not use meta-frameworks such as Next.js or Vite.
+- It must use Webpack and React Bootstrap.
+
+## Running the App
+
+### Using Docker
+
+In the project's root directory, execute the following command:
 
 ```
 docker-compose up --build
 ```
 
-El frontend va a ser levantado en http://localhost:8080 y el backend en http://localhost:3000
+The frontend will be available at http://localhost:8080, and the backend at http://localhost:3000.
 
-### Sin usar Docker
+### Without Docker
 
-Para levantar la API, ejecutar los siguientes comandos en el directorio `./api` usando Node 14:
+To start the API, execute the following commands in the ./api directory using Node 14:
 
 ```
 npm install
 npm run start
 ```
 
-El backend será ejecutado en http://localhost:3000
+The backend will run at http://localhost:3000.
 
-Para levantar el frontend, ejecutar los siguientes comandos en el root del proyecto usando Node 16:
+To start the frontend, execute the following commands in the project's root directory using Node 16:
 
 ```
 npm install
@@ -37,19 +53,19 @@ npm run start
 
 ## Endpoints
 
-- [GET] `/ping` endpoint para probar que la API haya levantado correctamente.
+- [GET] /ping endpoint is used to test if the API has started correctly.
 
 ```
 curl --location 'localhost:3000/ping'
 ```
 
-- [GET] `/files/data` trae una lista formateada y validada de archivos CSV y el contenido de los mismos. En caso de querer traer un archivo especifico se le puede agregar el queryParam `fileName` al endpoint.
+- [GET] /files/data retrieves a formatted and validated list of CSV files and their content. To retrieve a specific file, you can add the fileName query parameter to the endpoint.
 
 ```
 curl --location 'localhost:3000/files/data'
 ```
 
-- [GET] `/files/list` trae una lista de archivos CSV
+- [GET] /files/list retrieves a list of CSV files.
 
 ```
 curl --location 'localhost:3000/files/list'
@@ -57,7 +73,7 @@ curl --location 'localhost:3000/files/list'
 
 ## Tests
 
-Para ejecutar los unit tests, ejecutar el siguiente comando desde el directorio `./api`
+To run the unit tests, execute the following command from the ./api directory:
 
 ```
 npm run test
